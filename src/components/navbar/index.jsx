@@ -5,7 +5,7 @@ import netLogo from '../../assets/img/net2.png'
 
 const index = () => {
     return (
-        <nav className="flex  w-screen h-16 bg-transparent items-center justify-between px-8  fixed top-0">
+        <nav className="flex  w-screen h-16 bg-transparent items-center justify-between px-8  fixed top-0 z-50">
             <div className="flex items-center justify-start w-1/2 space-x-10">
                 <div className="flex justify-center items-baseline">
                 <img className="w-36 h-16 "  src={netLogo} alt="logo" />

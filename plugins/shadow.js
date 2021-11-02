@@ -27,12 +27,12 @@ module.exports = plugin.withOptions(() => {
         height: `calc(100vh - 4rem)`
       },
       '.my-shadow': {
-        boxShadow: "1px 7px 8px -3px rgba(255,255,255,0.37)",
+        boxShadow: "1px 3px 8px -3px rgba(255,255,255,0.37)",
         webkitBoxShadow: "1px 2px 8px -3px rgba(255,255,255,0.37)",
         mozBoxShadow: "1px 2px 8px -3px rgba(255,255,255,0.37)"
       },
-      '.my-width': {
-        width: "100%"
+      '.myMax': {
+        height: "max-content"
       },
       '.cus-width': {
         width: "70vw"

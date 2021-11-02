@@ -6,7 +6,7 @@ import {AiOutlineInfoCircle} from 'react-icons/ai'
 const index = () => {
     return (
         <div  className="h-screen w-screen  ">
-            <img className="my-width h-screen" src={Bgimage} alt="girl" />
+            <img className="w-full h-screen" src={Bgimage} alt="girl" />
             <div className=" absolute bottom-48 left-10  w-1/3 ">
                 <div className="flex flex-col items-start justify-between">
                     <div className="first flex flex-col justify-between">

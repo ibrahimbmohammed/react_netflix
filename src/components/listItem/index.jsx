@@ -1,12 +1,19 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import MysticImg from '../../assets/img/girl.jpg';
 import {BsPlayFill, BsPlus} from 'react-icons/bs';
 import {BiLike, BiDislike} from 'react-icons/bi';
+import storeApi from '../../utils/storeApi';
 
 const videoUrl = "https://assets.mixkit.co/videos/preview/mixkit-forest-stream-in-the-sunlight-529-large.mp4";
-const index = () => {
+function Index ({index}) {
+const {isHovered, setHovered, resetHovered} = useContext(storeApi);  
     return (
-        <div className="flex flex-col w-44 h-29 group mr-4  flex-shrink-0 bg-black relative">
+        <div 
+        className="flex flex-col w-44 h-36 group mr-4  flex-shrink-0 bg-black"
+         style={{left: isHovered && index * 225 - 50}}
+         onMouseEnter={()=> setHovered}
+         onMouseLeave={()=> resetHovered}
+        >
             <img className="h-full w-full bg-cover group-hover:h-0 group-hover:w-0 "  src={MysticImg} alt="girl" />
             <div className="group-hover:absolute bottom-0  invisible flex flex-col group-hover:visible group-hover:h-95 group-hover:w-86 group-hover:mb-8 transition-all delay-100 ease-in bg-black z-10 my-shadow">
                 <video className="w-full h-auto" src={videoUrl} autoPlay={true} loop={true} controls={true}  full={"true"}></video>
@@ -34,7 +41,7 @@ const index = () => {
     )
 }
 
-export default index
+export default Index
 
 
 //
